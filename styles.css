@@ -88,6 +88,16 @@ header.site{
 }
 .nav-row{display:flex;align-items:center;justify-content:space-between;height:82px;gap:24px;}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);}
+.school-logo{
+  height:56px;width:auto;object-fit:contain;flex:none;
+  background:#ffffff;padding:2px 4px;border-radius:6px;
+  box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+.footer-logo{
+  height:44px;width:auto;object-fit:contain;flex:none;
+  background:#ffffff;padding:2px 4px;border-radius:6px;
+  box-shadow:0 1px 3px rgba(0,0,0,.18);
+}
 .crest{
   width:46px;height:46px;border-radius:50%;
   background:conic-gradient(from 210deg, var(--navy), var(--navy-2) 40%, var(--gold) 100%);
