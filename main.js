@@ -8,7 +8,7 @@
   var root=document.documentElement, themeBtn=document.getElementById('themeToggle');
   function applyTheme(t){
     root.setAttribute('data-theme', t);
-    themeBtn.textContent = t==='dark' ? '☀ Light mode' : '🌙 Dark mode';
+    themeBtn.textContent = t==='dark' ? '☀ Switch to Light' : '🌙 Switch to Dark';
     themeBtn.setAttribute('aria-pressed', t==='dark');
     try{ localStorage.setItem('ss_theme', t); }catch(e){}
   }

@@ -109,12 +109,20 @@ header.site{
 
 nav.primary{display:flex;align-items:center;gap:6px;}
 nav.primary>a, .nav-dropdown>.dd-trigger{
-  text-decoration:none;padding:10px 14px;border-radius:4px;font-weight:500;font-size:.94rem;color:var(--ink);
+  text-decoration:none;padding:10px 14px;border-radius:4px;font-weight:500;font-size:.94rem;
+  color:#1a1d24;
   position:relative;display:inline-flex;align-items:center;gap:4px;background:none;border:none;cursor:pointer;
   font-family:var(--font-body);
+  transition:color .15s ease, background-color .15s ease;
 }
-nav.primary>a.active, nav.primary>a:hover,
-.nav-dropdown>.dd-trigger.active, .nav-dropdown>.dd-trigger:hover{color:var(--navy);}
+nav.primary>a:hover, .nav-dropdown>.dd-trigger:hover{
+  color:#152238;
+  background:rgba(21,34,56,.06);
+}
+nav.primary>a.active, .nav-dropdown>.dd-trigger.active{
+  color:#152238;
+  font-weight:600;
+}
 nav.primary>a.active::after, .nav-dropdown>.dd-trigger.active::after{
   content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--gold);
 }
@@ -138,10 +146,93 @@ nav.primary>a.active::after, .nav-dropdown>.dd-trigger.active::after{
 .nav-dropdown:hover>.dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
 .dropdown-menu a{
   display:block;padding:10px 18px;text-decoration:none;font-size:.9rem;
-  color:var(--ink);font-weight:500;transition:background .1s;
+  color:#1a1d24;font-weight:500;transition:background .1s;
 }
-.dropdown-menu a:hover{background:var(--ivory);color:var(--navy);}
+.dropdown-menu a:hover{background:var(--ivory);color:#152238;}
 .dropdown-menu a.active{color:var(--gold);font-weight:600;}
+
+/* Dark mode explicit button styles — white/light text and gold accents */
+:root[data-theme="dark"] nav.primary>a,
+:root[data-theme="dark"] .nav-dropdown>.dd-trigger{
+  color:#eee9dd;
+}
+:root[data-theme="dark"] nav.primary>a:hover,
+:root[data-theme="dark"] .nav-dropdown>.dd-trigger:hover{
+  color:#ffffff;
+  background:rgba(255,255,255,.08);
+}
+:root[data-theme="dark"] nav.primary>a.active,
+:root[data-theme="dark"] .nav-dropdown>.dd-trigger.active{
+  color:var(--gold-2);
+}
+:root[data-theme="dark"] .nav-cta{
+  background:var(--gold);
+  color:#152238!important;
+  border-color:var(--gold);
+}
+:root[data-theme="dark"] .nav-cta:hover{
+  background:var(--gold-2);
+  border-color:var(--gold-2);
+}
+:root[data-theme="dark"] .dropdown-menu{
+  background:#1a202c;
+  border-color:#2d3748;
+}
+:root[data-theme="dark"] .dropdown-menu a{
+  color:#eee9dd;
+}
+:root[data-theme="dark"] .dropdown-menu a:hover{
+  background:#263040;
+  color:var(--gold-2);
+}
+:root[data-theme="dark"] .dropdown-menu a.active{
+  color:var(--gold-2);
+}
+:root[data-theme="dark"] .hamburger span{
+  background:#ffffff;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) nav.primary>a,
+  :root:not([data-theme="light"]) .nav-dropdown>.dd-trigger{
+    color:#eee9dd;
+  }
+  :root:not([data-theme="light"]) nav.primary>a:hover,
+  :root:not([data-theme="light"]) .nav-dropdown>.dd-trigger:hover{
+    color:#ffffff;
+    background:rgba(255,255,255,.08);
+  }
+  :root:not([data-theme="light"]) nav.primary>a.active,
+  :root:not([data-theme="light"]) .nav-dropdown>.dd-trigger.active{
+    color:var(--gold-2);
+  }
+  :root:not([data-theme="light"]) .nav-cta{
+    background:var(--gold);
+    color:#152238!important;
+    border-color:var(--gold);
+  }
+  :root:not([data-theme="light"]) .nav-cta:hover{
+    background:var(--gold-2);
+    border-color:var(--gold-2);
+  }
+  :root:not([data-theme="light"]) .dropdown-menu{
+    background:#1a202c;
+    border-color:#2d3748;
+  }
+  :root:not([data-theme="light"]) .dropdown-menu a{
+    color:#eee9dd;
+  }
+  :root:not([data-theme="light"]) .dropdown-menu a:hover{
+    background:#263040;
+    color:var(--gold-2);
+  }
+  :root:not([data-theme="light"]) .dropdown-menu a.active{
+    color:var(--gold-2);
+  }
+  :root:not([data-theme="light"]) .hamburger span{
+    background:#ffffff;
+  }
+}
 
 /* Hamburger */
 .hamburger{display:none;background:none;border:none;padding:8px;}
