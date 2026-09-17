@@ -62,7 +62,7 @@
       </div>
       <a href="faq.html">FAQs</a>
       <a href="contact.html">Contact</a>
-      <a href="admission.html" class="nav-cta">Apply Now</a>
+      <a href="admission.html" class="nav-cta" data-edtrack-open>Apply Now</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -116,11 +116,11 @@
 <div class="ticker-bar">
   <span class="tag">LATEST</span>
   <div class="ticker-track" id="tickerTrack">
-    <span>📌 Admission open for Session 2026–27 — apply online or visit the front office</span>
+    <span>📌 Admission open for Session 2026–27 — apply online via EdTrack ERP</span>
     <span>🏆 Annual Sports Day scheduled — details on the notice board</span>
     <span>🎨 Inter-house Art &amp; Craft Workshop this month</span>
     <span>🩺 Free student health check-up camp — permission slips due Friday</span>
-    <span>📌 Admission open for Session 2026–27 — apply online or visit the front office</span>
+    <span>📌 Admission open for Session 2026–27 — apply online via EdTrack ERP</span>
     <span>🏆 Annual Sports Day scheduled — details on the notice board</span>
     <span>🎨 Inter-house Art &amp; Craft Workshop this month</span>
     <span>🩺 Free student health check-up camp — permission slips due Friday</span>
@@ -230,9 +230,9 @@
     <div class="cta-band">
       <div>
         <h2>Admissions open for Session 2026–27</h2>
-        <p>Start with a short enquiry form — the office will follow up within one working day.</p>
+        <p>Apply directly online through our official EdTrack ERP admissions portal.</p>
       </div>
-      <a href="admission.html" class="btn btn-gold">Apply now</a>
+      <button type="button" class="btn btn-gold" data-edtrack-open>Apply now</button>
     </div>
   </div>
 </section>
@@ -300,28 +300,7 @@
 
 <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 
-<!-- Admission modal -->
-<div class="modal-overlay" id="modal-admission">
-  <div class="modal">
-    <button class="modal-close" data-close-modal>×</button>
-    <h3>Admission enquiry</h3>
-    <p style="margin-bottom:20px;">Tell us a little about your child — we'll follow up within one working day.</p>
-    <p class="form-msg" id="admissionMsg"></p>
-    <form id="admissionForm" novalidate>
-      <div class="field" data-field="pName"><label for="aName">Parent / guardian name</label><input type="text" id="aName" required><small class="err">Please enter your name.</small></div>
-      <div class="field" data-field="pPhone"><label for="aPhone">Phone number</label><input type="tel" id="aPhone" required><small class="err">Please enter a 10-digit phone number.</small></div>
-      <div class="field" data-field="grade"><label for="aGrade">Grade applying for</label>
-        <select id="aGrade" required>
-          <option value="">Select a grade</option>
-          <option>Nursery</option><option>KG</option>
-          <option>Grade 1–5</option><option>Grade 6–8</option><option>Grade 9–10</option>
-        </select>
-        <small class="err">Please select a grade.</small>
-      </div>
-      <button class="btn btn-navy" type="submit" style="width:100%;justify-content:center;">Submit enquiry</button>
-    </form>
-  </div>
-</div>
+
 
 <!-- Tour modal -->
 <div class="modal-overlay" id="modal-tour">

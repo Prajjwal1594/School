@@ -255,58 +255,7 @@
     });
   }
 
-  /* Admission form (modal) */
-  var admissionForm = document.getElementById('admissionForm');
-  if(admissionForm){
-    admissionForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      var name=document.getElementById('aName'), phone=document.getElementById('aPhone'), grade=document.getElementById('aGrade');
-      var ok=true;
-      setInvalid(name.closest('.field'), !name.value.trim()); if(!name.value.trim()) ok=false;
-      var phoneOk=/^\d{10}$/.test(phone.value.replace(/\D/g,''));
-      setInvalid(phone.closest('.field'), !phoneOk); if(!phoneOk) ok=false;
-      setInvalid(grade.closest('.field'), !grade.value); if(!grade.value) ok=false;
-      var out=document.getElementById('admissionMsg');
-      if(!ok){ showMsg(out,'Please fix the highlighted fields.', false); return; }
-      // Save to localStorage
-      try{
-        var enquiries = JSON.parse(localStorage.getItem('ss_enquiries')||'[]');
-        enquiries.push({name:name.value.trim(),phone:phone.value.trim(),grade:grade.value,date:new Date().toISOString()});
-        localStorage.setItem('ss_enquiries', JSON.stringify(enquiries));
-      }catch(err){}
-      showMsg(out, 'Enquiry received for ' + grade.value + '. Our admissions office will call ' + phone.value + ' shortly.', true);
-      admissionForm.reset();
-      setTimeout(function(){ document.getElementById('modal-admission').classList.remove('open'); }, 1800);
-    });
-  }
 
-  /* Inline admission form (admission page) */
-  var inlineAdmForm = document.getElementById('inlineAdmissionForm');
-  if(inlineAdmForm){
-    inlineAdmForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      var name=document.getElementById('iaName'), phone=document.getElementById('iaPhone'),
-          email=document.getElementById('iaEmail'), grade=document.getElementById('iaGrade'),
-          child=document.getElementById('iaChild');
-      var ok=true;
-      setInvalid(name.closest('.field'), !name.value.trim()); if(!name.value.trim()) ok=false;
-      var phoneOk=/^\d{10}$/.test(phone.value.replace(/\D/g,''));
-      setInvalid(phone.closest('.field'), !phoneOk); if(!phoneOk) ok=false;
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-      setInvalid(email.closest('.field'), !emailOk); if(!emailOk) ok=false;
-      setInvalid(grade.closest('.field'), !grade.value); if(!grade.value) ok=false;
-      setInvalid(child.closest('.field'), !child.value.trim()); if(!child.value.trim()) ok=false;
-      var out=document.getElementById('inlineAdmMsg');
-      if(!ok){ showMsg(out,'Please fix the highlighted fields.', false); return; }
-      try{
-        var enquiries = JSON.parse(localStorage.getItem('ss_enquiries')||'[]');
-        enquiries.push({parent:name.value.trim(),child:child.value.trim(),phone:phone.value.trim(),email:email.value.trim(),grade:grade.value,date:new Date().toISOString()});
-        localStorage.setItem('ss_enquiries', JSON.stringify(enquiries));
-      }catch(err){}
-      showMsg(out, 'Enquiry received for ' + child.value.trim() + ' ('+grade.value+'). We will contact you at ' + phone.value + ' within one working day.', true);
-      inlineAdmForm.reset();
-    });
-  }
 
   /* Tour form */
   var tourForm = document.getElementById('tourForm');

@@ -15,7 +15,7 @@
 
 <div class="topbar"><div class="wrap"><div class="topbar-links"><a href="contact.html">✉ stsaviourschool04@gmail.com</a><a href="tel:9352541391">☎ 93525 41391</a></div><div class="topbar-links"><a href="#" data-open-modal="tour">Book a campus tour</a><button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Dark mode</button></div></div></div>
 
-<header class="site"><div class="wrap nav-row"><a href="index.html" class="brand"><img src="logo.png" alt="St. Saviour School Logo" class="school-logo"><span class="brand-text"><span class="name">St. Saviour School</span><span class="tag">GARDEN RESIDENCY · JAIPUR</span></span></a><nav class="primary" id="primaryNav"><a href="index.html">Home</a><div class="nav-dropdown"><button class="dd-trigger">About <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="about.html">Overview</a><a href="facility.html">Facility</a><a href="gallery.html">Gallery</a></div></div><div class="nav-dropdown"><button class="dd-trigger">Academics <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="academics.html">Overview</a><a href="faculty.html">Faculty</a><a href="beyond-academics.html">Beyond Academics</a></div></div><div class="nav-dropdown"><button class="dd-trigger active">Admission <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="admission.html" class="active">Overview</a><a href="results.html">Results</a></div></div><a href="faq.html">FAQs</a><a href="contact.html">Contact</a><a href="admission.html" class="nav-cta">Apply Now</a></nav><button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<header class="site"><div class="wrap nav-row"><a href="index.html" class="brand"><img src="logo.png" alt="St. Saviour School Logo" class="school-logo"><span class="brand-text"><span class="name">St. Saviour School</span><span class="tag">GARDEN RESIDENCY · JAIPUR</span></span></a><nav class="primary" id="primaryNav"><a href="index.html">Home</a><div class="nav-dropdown"><button class="dd-trigger">About <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="about.html">Overview</a><a href="facility.html">Facility</a><a href="gallery.html">Gallery</a></div></div><div class="nav-dropdown"><button class="dd-trigger">Academics <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="academics.html">Overview</a><a href="faculty.html">Faculty</a><a href="beyond-academics.html">Beyond Academics</a></div></div><div class="nav-dropdown"><button class="dd-trigger active">Admission <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="admission.html" class="active">Overview</a><a href="results.html">Results</a></div></div><a href="faq.html">FAQs</a><a href="contact.html">Contact</a><a href="admission.html" class="nav-cta" data-edtrack-open>Apply Now</a></nav><button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
 
 <section class="page-hero">
   <div class="wrap">
@@ -35,8 +35,8 @@
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">1</div>
-        <h4>Submit enquiry</h4>
-        <p>Fill the form below or visit the front office with basic details about your child.</p>
+        <h4>Submit online enquiry</h4>
+        <p>Click "Apply for Admission" to submit your enquiry directly to our official EdTrack ERP admissions portal.</p>
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
@@ -97,20 +97,15 @@
       </ul>
     </div>
     <div>
-      <span class="eyebrow">Enquiry form</span>
-      <h2>Start your application</h2>
-      <p class="form-msg" id="inlineAdmMsg"></p>
-      <form id="inlineAdmissionForm" novalidate>
-        <div class="field"><label for="iaName">Parent / guardian name</label><input type="text" id="iaName" required><small class="err">Please enter your name.</small></div>
-        <div class="field"><label for="iaChild">Child's name</label><input type="text" id="iaChild" required><small class="err">Please enter the child's name.</small></div>
-        <div class="field"><label for="iaPhone">Phone number</label><input type="tel" id="iaPhone" required><small class="err">Please enter a 10-digit phone number.</small></div>
-        <div class="field"><label for="iaEmail">Email</label><input type="email" id="iaEmail" required><small class="err">Please enter a valid email address.</small></div>
-        <div class="field"><label for="iaGrade">Grade applying for</label>
-          <select id="iaGrade" required><option value="">Select a grade</option><option>Nursery</option><option>KG</option><option>Grade 1–5</option><option>Grade 6–8</option><option>Grade 9–10</option></select>
-          <small class="err">Please select a grade.</small>
-        </div>
-        <button class="btn btn-navy" type="submit" style="width:100%;justify-content:center;">Submit enquiry</button>
-      </form>
+      <div style="background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:36px;box-shadow:var(--shadow);">
+        <span class="eyebrow">Online Application</span>
+        <h2 style="margin-bottom:12px;">Official Admission Portal</h2>
+        <p style="color:var(--ink-soft);line-height:1.6;margin-bottom:24px;">All enquiries and applications for Nursery through Grade 10 are processed exclusively through our integrated EdTrack ERP admissions system.</p>
+        <button type="button" class="btn btn-navy" data-edtrack-open style="width:100%;justify-content:center;padding:14px 24px;font-size:1rem;gap:8px;">
+          Apply for Admission
+        </button>
+        <p style="font-size:.82rem;color:var(--ink-soft);margin-top:14px;margin-bottom:0;text-align:center;">Instant submission with real-time verification and confirmation.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -136,7 +131,6 @@
 
 <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 <div class="modal-overlay" id="modal-tour"><div class="modal"><button class="modal-close" data-close-modal>×</button><h3>Book a campus tour</h3><p style="margin-bottom:20px;">Pick a date and we'll confirm a time slot by phone.</p><p class="form-msg" id="tourMsg"></p><form id="tourForm" novalidate><div class="field"><label for="tName">Your name</label><input type="text" id="tName" required><small class="err">Please enter your name.</small></div><div class="field"><label for="tPhone">Phone number</label><input type="tel" id="tPhone" required><small class="err">Please enter a 10-digit phone number.</small></div><div class="field"><label for="tDate">Preferred date</label><input type="date" id="tDate" required><small class="err">Please choose a date.</small></div><button class="btn btn-navy" type="submit" style="width:100%;justify-content:center;">Request a slot</button></form></div></div>
-<div class="modal-overlay" id="modal-admission"><div class="modal"><button class="modal-close" data-close-modal>×</button><h3>Admission enquiry</h3><p style="margin-bottom:20px;">Tell us a little about your child — we'll follow up within one working day.</p><p class="form-msg" id="admissionMsg"></p><form id="admissionForm" novalidate><div class="field"><label for="aName">Parent / guardian name</label><input type="text" id="aName" required><small class="err">Please enter your name.</small></div><div class="field"><label for="aPhone">Phone number</label><input type="tel" id="aPhone" required><small class="err">Please enter a 10-digit phone number.</small></div><div class="field"><label for="aGrade">Grade applying for</label><select id="aGrade" required><option value="">Select a grade</option><option>Nursery</option><option>KG</option><option>Grade 1–5</option><option>Grade 6–8</option><option>Grade 9–10</option></select><small class="err">Please select a grade.</small></div><button class="btn btn-navy" type="submit" style="width:100%;justify-content:center;">Submit enquiry</button></form></div></div>
 <script src="main.js"></script>
 <script src="https://ed-track-erp.vercel.app/static/js/edtrack-admission-widget.js" 
         data-school="STSS" 
