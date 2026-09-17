@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Contact — St. Saviour School, Jaipur</title>
+<meta name="description" content="Contact St. Saviour School — address, phone, email, office hours, and enquiry form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><div class="topbar-links"><a href="contact.html">✉ stsaviourschool04@gmail.com</a><a href="tel:9352541391">☎ 93525 41391</a></div><div class="topbar-links"><a href="#" data-open-modal="tour">Book a campus tour</a><button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Dark mode</button></div></div></div>
+
+<header class="site"><div class="wrap nav-row"><a href="index.html" class="brand"><span class="crest">SS</span><span class="brand-text"><span class="name">St. Saviour School</span><span class="tag">GARDEN RESIDENCY · JAIPUR</span></span></a><nav class="primary" id="primaryNav"><a href="index.html">Home</a><div class="nav-dropdown"><button class="dd-trigger">About <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="about.html">Overview</a><a href="facility.html">Facility</a><a href="gallery.html">Gallery</a></div></div><div class="nav-dropdown"><button class="dd-trigger">Academics <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="academics.html">Overview</a><a href="faculty.html">Faculty</a><a href="beyond-academics.html">Beyond Academics</a></div></div><div class="nav-dropdown"><button class="dd-trigger">Admission <span class="dd-arrow">▾</span></button><div class="dropdown-menu"><a href="admission.html">Overview</a><a href="results.html">Results</a></div></div><a href="faq.html">FAQs</a><a href="contact.html" class="active">Contact</a><a href="admission.html" class="nav-cta">Apply Now</a></nav><button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+    <h1>Contact Us</h1>
+    <p>Visit, call, or write to us — the front office is open Monday through Saturday.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Get in touch</span>
+      <h2>Visit, call, or write to us</h2>
+      <div style="margin-top:28px;">
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div><b>Address</b><p style="margin:2px 0 0;">St. Saviour School, Garden Residency, Sirsi Link Road, Jaipur, Rajasthan</p></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">✉</div>
+          <div><b>Email</b><p style="margin:2px 0 0;">stsaviourschool04@gmail.com</p></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">☎</div>
+          <div><b>Phone</b><p style="margin:2px 0 0;">+91 93525 41391</p></div>
+        </div>
+      </div>
+      <table style="margin-top:20px;font-size:.9rem;">
+        <tbody>
+          <tr><td style="padding:4px 0;color:var(--ink-soft);">Mon–Sat</td><td style="padding:4px 0;">08:30 – 02:00</td></tr>
+          <tr><td style="padding:4px 0;color:var(--ink-soft);">Sunday</td><td style="padding:4px 0;">Closed</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Map placeholder -->
+      <div class="map-embed" style="margin-top:28px;background:linear-gradient(135deg,var(--navy),var(--navy-2));display:flex;align-items:center;justify-content:center;color:var(--gold-2);font-size:.9rem;text-align:center;padding:20px;">
+        <div>
+          <div style="font-size:2rem;margin-bottom:8px;">📍</div>
+          <b>St. Saviour School</b><br>
+          Garden Residency, Sirsi Link Road<br>
+          Jaipur, Rajasthan<br>
+          <a href="https://maps.google.com/?q=St+Saviour+School+Garden+Residency+Jaipur" target="_blank" rel="noopener" style="color:var(--gold-2);margin-top:8px;display:inline-block;">Open in Google Maps →</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Send a message</span>
+      <h2>We'll respond within one working day</h2>
+      <form id="contactForm" novalidate style="margin-top:24px;">
+        <p class="form-msg" id="contactMsg"></p>
+        <div class="field" data-field="name">
+          <label for="cName">Full name</label>
+          <input type="text" id="cName" required>
+          <small class="err">Please enter your name.</small>
+        </div>
+        <div class="field" data-field="email">
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" required>
+          <small class="err">Please enter a valid email address.</small>
+        </div>
+        <div class="field" data-field="phone">
+          <label for="cPhone">Phone</label>
+          <input type="tel" id="cPhone" required>
+          <small class="err">Please enter a 10-digit phone number.</small>
+        </div>
+        <div class="field" data-field="message">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" rows="4" required></textarea>
+          <small class="err">Let us know how we can help.</small>
+        </div>
+        <button class="btn btn-navy" type="submit" style="width:100%;justify-content:center;">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="newsletter">
+      <div>
+        <h3 style="margin-bottom:4px;">Stay in the loop</h3>
+        <p style="margin:0;">Get circulars, event dates and admission updates by email.</p>
+      </div>
+      <form id="newsletterForm" novalidate>
+        <input type="email" id="newsletterEmail" placeholder="you@email.com" aria-label="Email address" required>
+        <button class="btn btn-navy" type="submit">Sign up</button>
+      </form>
+    </div>
+    <p id="newsletterMsg" class="form-msg" style="max-width:760px;margin-top:14px;"></p>
+  </div>
+</section>
+
+<footer><div class="wrap"><div class="footer-grid"><div><div class="foot-brand"><span class="crest" style="width:38px;height:38px;font-size:.9rem;">SS</span><span>St. Saviour School</span></div><p style="color:#9aa3ba;font-size:.9rem;max-width:32ch;">Garden Residency, Sirsi Link Road, Jaipur — educating students from Nursery through Grade 12.</p><div class="social-row"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="YouTube">▶</a></div></div><div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="admission.html">Admission</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h4>Opening hours</h4><div class="hours-row"><span>Mon – Sat</span><span>8:30–2:00</span></div><div class="hours-row"><span>Sunday</span><span>Closed</span></div></div><div><h4>Get in touch</h4><ul><li>Garden Residency, Sirsi Link Road, Jaipur</li><li><a href="mailto:stsaviourschool04@gmail.com">stsaviourschool04@gmail.com</a></li><li><a href="tel:9352541391">+91 93525 41391</a></li></ul></div></div><div class="bottom-bar"><span>© 2026 St. Saviour School. All rights reserved.</span><span><a href="faq.html">FAQs</a> · <a href="contact.html">Contact</a></span></div></div></footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<div class="modal-overlay" id="modal-tour"><div class="modal"><button class="modal-close" data-close-modal>×</button><h3>Book a campus tour</h3><p style="margin-bottom:20px;">Pick a date and we'll confirm a time slot by phone.</p><p class="form-msg" id="tourMsg"></p><form id="tourForm" novalidate><div class="field"><label for="tName">Your name</label><input type="text" id="tName" required><small class="err">Please enter your name.</small></div><div class="field"><label for="tPhone">Phone number</label><input type="tel" id="tPhone" required><small class="err">Please enter a 10-digit phone number.</small></div><div class="field"><label for="tDate">Preferred date</label><input type="date" id="tDate" required><small class="err">Please choose a date.</small></div><button class="btn btn-navy" type="submit" style="width:100%;justify-content:center;">Request a slot</button></form></div></div>
+<div class="modal-overlay" id="modal-admission"><div class="modal"><button class="modal-close" data-close-modal>×</button><h3>Admission enquiry</h3><p style="margin-bottom:20px;">Tell us a little about your child — we'll follow up within one working day.</p><p class="form-msg" id="admissionMsg"></p><form id="admissionForm" novalidate><div class="field"><label for="aName">Parent / guardian name</label><input type="text" id="aName" required><small class="err">Please enter your name.</small></div><div class="field"><label for="aPhone">Phone number</label><input type="tel" id="aPhone" required><small class="err">Please enter a 10-digit phone number.</small></div><div class="field"><label for="aGrade">Grade applying for</label><select id="aGrade" required><option value="">Select a grade</option><option>Nursery</option><option>KG</option><option>Grade 1–5</option><option>Grade 6–8</option><option>Grade 9–10</option><option>Grade 11–12</option></select><small class="err">Please select a grade.</small></div><button class="btn btn-navy" type="submit" style="width:100%;justify-content:center;">Submit enquiry</button></form></div></div>
+<script src="main.js"></script>
+</body>
+</html>
